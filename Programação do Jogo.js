@@ -21,6 +21,9 @@ function iniciarJogo(dificuldade) {
 }
 
 function enviarPalpite() {
+
+    document.getElementById('resultadoJogo').classList.remove('bloqueado');
+
     let palpite = document.getElementById('palpite').value;
 
     if (palpite < 1 || palpite > 100) {
@@ -38,7 +41,8 @@ function enviarPalpite() {
 
         document.getElementById('opçoesJogo').innerHTML = `
         <button onclick="reiniciarJogo()">Sim</button>
-        <button onclick="encerrarJogo()">Não</button> 
+        <button onclick="encerrarJogo()">Não</button><br><br>
+        <img src = "emojiMeme.jpg" alt = "emojiMeme" width="200" height="200">
         `;
     }
 
@@ -50,7 +54,8 @@ function enviarPalpite() {
 
         document.getElementById('opçoesJogo').innerHTML = `
         <button onclick="reiniciarJogo()">Sim</button>
-        <button onclick="encerrarJogo()">Não</button> 
+        <button onclick="encerrarJogo()">Não</button><br><br>
+        <img src = "emojiMemeTriste.webp" alt = "emojiMeme" width="350" height="200">
         `;
     }
 

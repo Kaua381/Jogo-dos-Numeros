@@ -1,9 +1,136 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e6f0fa;
+    color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    background-color: #b3d4fc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #1a3e72;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Área do jogo */
+#blocoJogo,
+#resultadoJogo {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #cddff0;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Campo de chute */
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #aacbe1;
+    border-radius: 6px;
+    width: 60%;
+    max-width: 200px;
+    margin-bottom: 10px;
+}
+
+/* Botões */
+button {
+    background-color: #4a90e2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #357ab7;
+}
+
+/* Mensagens e resultados */
+#mensagemDificudade,
+#mensagemTentativa,
+#resultado,
+#pergunta,
+#opçoesJogo {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+/* Rodapé */
+footer {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: auto;
+    padding: 15px;
+    background-color: #d8e9f8;
+    border-radius: 10px;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #2e6da4;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Imagem na página de créditos */
+main img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* Container principal da página de créditos */
+main {
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #cddff0;
+    text-align: center;
+}
+
+/* Estilo para estado bloqueado */
 .bloqueado {
     filter: blur(5px);
     pointer-events: none;
     opacity: 0.5;
-}
-
-footer {
-    margin-top: 500px;
 }

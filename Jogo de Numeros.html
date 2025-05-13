@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo dos Numeros</title>
+    <link rel="stylesheet" href="Interface do Jogo.css">
+    <script src="Programação do Jogo.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Jogo dos Números</h1>
+        <p>Teste suas habilidades tentando acertar um número de 1 a 100!</p>
+        <p>Escolha sua Dificuldade:</p>
+        <button onclick="iniciarJogo('facil')">Fácil</button>
+        <button onclick="iniciarJogo('normal')">Normal</button>
+        <button onclick="iniciarJogo('dificil')">Difícil</button>
+    </header>
+
+    <div id="blocoJogo" class="bloqueado">
+        <h2>Área do jogo</h2>
+        <p id="mensagemDificudade"></p>
+        <p id="mensagemTentativa"></p>
+        <input type="number" id="palpite" placeholder="Digite um número">
+        <button onclick="enviarPalpite()">Enviar</button>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Kauã F. - Todos os direitos reservados.</p>
+        <p>Conecte-se comigo!</p>
+        <a href="" target="_blank">LinkedIn</a>
+        <a href="" target="_blank">GitHub</a>
+    </footer>
+</body>

@@ -23,7 +23,10 @@ function iniciarJogo(dificuldade) {
 function enviarPalpite() {
     let palpite = document.getElementById('palpite').value;
 
-    document.getElementById('spoiler').innerHTML = numeroSecreto;
+    if (palpite < 1 || palpite > 100) {
+        document.getElementById('resultado').innerHTML = "Por favor, insira um número entre 1 e 100.";
+        return;
+    }
 
     if (palpite < numeroSecreto) {
         document.getElementById('resultado').innerHTML = "Seu palpite é menor que o número secreto.";
@@ -39,11 +42,26 @@ function enviarPalpite() {
         `;
     }
 
-}
-    function reiniciarJogo() {
-        location.reload();
+    tentativas--;
+    document.getElementById('mensagemTentativa').innerHTML = "Você tem " + tentativas + " tentativas para acertar o número secreto.";
+    if (tentativas <= 0) {
+        document.getElementById('resultado').innerHTML = "Você perdeu! O número secreto era: " + numeroSecreto;
+        document.getElementById('pergunta').innerHTML = "Você deseja jogar novamente?";
+
+        document.getElementById('opçoesJogo').innerHTML = `
+        <button onclick="reiniciarJogo()">Sim</button>
+        <button onclick="encerrarJogo()">Não</button> 
+        `;
     }
 
-    function encerrarJogo() {
-        window.location.href = "creditos.html";
-    }
+    document.getElementById('palpite').value = "";
+
+}
+
+function reiniciarJogo() {
+    location.reload();
+}
+
+function encerrarJogo() {
+    window.location.href = "creditos.html";
+}
